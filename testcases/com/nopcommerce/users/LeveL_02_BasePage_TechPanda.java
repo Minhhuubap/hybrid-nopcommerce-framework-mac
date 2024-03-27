@@ -77,6 +77,11 @@ public class LeveL_02_BasePage_TechPanda {
           Assert.assertEquals(basePage.getText(driver,"//h1[text()='My Dashboard']//parent::div//following-sibling::div//strong"), "Hello, A B!");
      }
 
+     @Test
+     public void TC_02_Alert() {
+
+     }
+
 
 
 }

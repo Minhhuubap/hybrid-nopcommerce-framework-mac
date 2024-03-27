@@ -4,36 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c45876f-a88f-4696-9aaf-e2fdf4a3659a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/selenium_api_4_11_0_sources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/commons/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/commons/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/commons/GlobalConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/HomePageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/LoginPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/RegisterPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/reportConfigs/AllureListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/reportConfigs/ExtentListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/retryConfigs/RetryAnalyzer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/utilities/EmailConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/utilities/ExcelConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/utilities/JDBCConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/utilities/PropertiesConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hybrid-nopcommerce-framework-mac.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/HomePageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/LoginPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/RegisterPageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/testing.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/testng.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/users/LeveL_02_BasePage_TechPanda.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/users/Level_01_Repeat_Yourself.java" afterDir="false" />
-    </list>
+    <list default="true" id="0c45876f-a88f-4696-9aaf-e2fdf4a3659a" name="Changes" comment="FRAMEWORK ON MAC" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,4 +64,8 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="FRAMEWORK ON MAC" />
+    <option name="LAST_COMMIT_MESSAGE" value="FRAMEWORK ON MAC" />
+  </component>
 </project>
