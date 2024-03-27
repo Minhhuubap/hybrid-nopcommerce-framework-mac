@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="selenium-api-4.11.0-sources">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Selenium-webdriver-java-testng-mac/libaries/selenium-server-4.16.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Selenium-webdriver-java-testng-mac/libaries/testng-7.8.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../Selenium-webdriver-java-testng-mac/libaries/selenium-api-4.11.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Selenium-webdriver-java-testng-mac/libaries/selenium-firefox-driver-4.11.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
