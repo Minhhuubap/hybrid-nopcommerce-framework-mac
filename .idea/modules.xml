@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/hybrid-nopcommerce-framework-mac.iml" filepath="$PROJECT_DIR$/hybrid-nopcommerce-framework-mac.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hybrid-framework-mac.iml" filepath="$PROJECT_DIR$/hybrid-framework-mac.iml" />
     </modules>
   </component>
 </project>

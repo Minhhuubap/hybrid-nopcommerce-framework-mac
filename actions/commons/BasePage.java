@@ -15,15 +15,15 @@ public class BasePage {
         driver.get(URL);
     }
 
-    public String getTitle(WebDriver driver, String title)  {
+    public String getTitle(WebDriver driver)  {
         return driver.getTitle();
     }
 
-    public String getCurrentURL(WebDriver driver, String URL) {
+    public String getCurrentURL(WebDriver driver) {
         return driver.getCurrentUrl();
     }
 
-    public String getPageSource(WebDriver driver, String source) {
+    public String getPageSource(WebDriver driver) {
         return driver.getPageSource();
     }
 
@@ -48,9 +48,9 @@ public class BasePage {
             - Chờ cho alert hiện bằng explicit wait
      */
 
-    public Alert waitAlertPresence(WebDriver driver, Alert alert) {
+    public void waitAlertPresence(WebDriver driver) {
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.alertIsPresent());
-        return driver.switchTo().alert(); //expected return theo data type
+        driver.switchTo().alert();
     }
 
     public void acceptAlert (WebDriver driver) {
@@ -79,7 +79,7 @@ public class BasePage {
         return driver.findElements(By.xpath(xpath));
     }
 
-    public void clickToElemnt(WebDriver driver, String locator) {
+    public void clickToElement(WebDriver driver, String locator) {
         driver.findElement(By.xpath(locator)).click();
     }
 
@@ -219,5 +219,20 @@ public class BasePage {
     }
 
     //Tạm hold 3 phần: Iframe, JS, Wait (bỏ Upload, window)
+
+    //Wait
+    public void waitForElementVisible(WebDriver driver, String locator) {
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+    }
+
+    public void waitForElementClickable(WebDriver driver, String locator) {
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
+    }
+    public void waitForElementInvisible(WebDriver driver, String locator) {
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(locator)));
+    }
+    public void waitForAlertPresence(WebDriver driver, String locator) {
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
+    }
 
 }
