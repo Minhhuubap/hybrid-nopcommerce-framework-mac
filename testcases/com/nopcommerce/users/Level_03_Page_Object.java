@@ -36,7 +36,7 @@ public class Level_03_Page_Object {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         //Khởi tạo page và bắt đầu làm action của page đó
-        homePage = new HomePageObject();
+        homePage = new HomePageObject(driver);
     }
 
     //Testcases
@@ -73,9 +73,9 @@ public class Level_03_Page_Object {
 
         loginPage.enterToEmailTextbox("");
         loginPage.enterToPasswordTextbox("");
-        registerPage.clickToLoginButton();
+        loginPage.clickToLoginButton();
 
-        homePage = new HomePageObject();
+        homePage = new HomePageObject(driver);
 
         Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
     }
@@ -95,6 +95,7 @@ public class Level_03_Page_Object {
         Assert.assertEquals(customerInfo.getMonthDropDownSelectedValue(),"");
         Assert.assertEquals(customerInfo.getYearDropDownSelectedValue(),"");
         Assert.assertEquals(customerInfo.getEmailTextboxValue(),"");
+        Assert.assertEquals(customerInfo.getCompanyTextboxValue(),"");
 
 
 

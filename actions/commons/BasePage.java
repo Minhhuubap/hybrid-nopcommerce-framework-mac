@@ -4,6 +4,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -98,17 +99,8 @@ public class BasePage {
         }
     }
 
-    public void getSelectedItemInDropDown(WebDriver driver, String parentLocator, String childLocator) {
-        driver.findElement(By.xpath(parentLocator)).click();
-
-        List<WebElement> allItems = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(childLocator)));
-        for (WebElement item: allItems) {
-            String item1 = item.getText();
-            if (item1.equals(childLocator)) {
-                item.getText();
-                break;
-            }
-        }
+    public String getSelectedItemInDropDown(WebDriver driver, String locator) {
+        return new Select(getElement(driver, locator)).getFirstSelectedOption().getText();
     }
 
     public void sleepInSecond(long timeInSecond) {
@@ -177,15 +169,15 @@ public class BasePage {
     - Enabled: Presence + click/edit/select/scroll
     - Selected: Presece + tagname = input/option (select)
      */
-    public boolean isControlDisplayed(WebDriver driver, String locator) {
+    public boolean isElementDisplayed(WebDriver driver, String locator) {
         return getElement(driver, locator).isDisplayed();
     }
 
-    public boolean isControlSelected(WebDriver driver, String locator) {
+    public boolean isElementSelected(WebDriver driver, String locator) {
         return getElement(driver, locator).isSelected();
     }
 
-    public boolean isControlEnabled(WebDriver driver, String locator) {
+    public boolean isElementEnabled(WebDriver driver, String locator) {
         return getElement(driver, locator).isEnabled();
     }
 
@@ -235,4 +227,5 @@ public class BasePage {
         new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
     }
 
+    //
 }
