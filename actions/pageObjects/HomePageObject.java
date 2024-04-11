@@ -8,9 +8,11 @@ import pageUIs.RegisterPageUI;
 public class HomePageObject extends BasePage {
     private WebDriver driver;
 
+
     public HomePageObject(WebDriver driver) {   //Đoạn này map driver
         this.driver = driver;
     }   //Constructor
+
 
     public void clickToRegisterLink() {
         waitForElementClickable(driver, HomePageUI.REGISTER_LINK);

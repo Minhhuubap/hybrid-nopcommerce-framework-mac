@@ -1,21 +1,24 @@
 package com.nopcommerce.users;
 
 import commons.BasePage;
+import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.CustomerInfoPageObject;
 import pageObjects.HomePageObject;
 import pageObjects.LoginPageObject;
 import pageObjects.RegisterPageObject;
 
-import java.sql.Driver;
 import java.time.Duration;
 
-public class Level_03_Page_Object {
+public class Level_04_Multiple_Browser extends BaseTest {
     //Declare variable
     private WebDriver driver;
     private HomePageObject homePage;
@@ -24,28 +27,23 @@ public class Level_03_Page_Object {
     private CustomerInfoPageObject customerInfo;
 
 
-
-    //Pre-condition
-
+    @Parameters("browser")
     @BeforeClass
-    public void beforeClass() {
-        driver = new FirefoxDriver();           //Driver cần được truyền duy nhât 1 lần, ko cần new nhièu
+    public void beforeClass(String browserName) {
+        driver = getBrowserDriver(browserName);  //Method trong BaseTest    //Cần phải map driver vì biến driver ban đầu chưa được map?
 
-        //Open URL -> qua Home Page
-        driver.get("");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//       driver = new FirefoxDriver();
+//       driver.get("");
+//       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        //Khởi tạo page và bắt đầu làm action của page đó
-        homePage = new HomePageObject(driver);      //Biến driver = new FireFox
+        homePage = new HomePageObject(driver);
     }
 
     //Testcases
     @Test
     public void User_01_Register() {
         //Action 1
-        homePage.clickToRegisterLink();             //Biến driver nhảy vào hàm clickToRegisterLink ở HomePageObject -> biến driver nhảy vào method Wait của BaseP
-
-        //homePage -> registerpage -> new registerPage
+        homePage.clickToRegisterLink();
         registerPage = new RegisterPageObject(driver);
 
         registerPage.clickToMaleRadio();
@@ -82,10 +80,9 @@ public class Level_03_Page_Object {
 
     @Test
     public void User_03_MyAccount() {
-        //Home page -> customer info
         homePage.clickToMyAccountLink();
 
-        customerInfo = new CustomerInfoPageObject(driver);            //Nếu không map driver thì mỗi lần new TE ko có driver được tạo?
+        customerInfo = new CustomerInfoPageObject(driver);
 
         Assert.assertEquals(customerInfo.isGenderMaleSelected(),"");
 
@@ -101,8 +98,6 @@ public class Level_03_Page_Object {
 
 
     }
-
-    //Post-condition
 
     @AfterClass
     public void afterClass(){

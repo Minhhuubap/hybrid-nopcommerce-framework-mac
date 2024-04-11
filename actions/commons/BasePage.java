@@ -11,7 +11,7 @@ import java.time.Duration;
 import java.util.List;
 
 public class BasePage {
-    //Đặt biến driver là tham số
+
     public void openPageURL(WebDriver driver, String URL) {
         driver.get(URL);
     }

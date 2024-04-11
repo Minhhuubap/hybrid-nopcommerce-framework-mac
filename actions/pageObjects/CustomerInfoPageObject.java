@@ -6,6 +6,9 @@ import pageUIs.CustomerInfoPageUI;
 
 public class CustomerInfoPageObject extends BasePage {
     private WebDriver driver;
+    public CustomerInfoPageObject(WebDriver driver){
+        this.driver = driver;
+    }
     public boolean isGenderMaleSelected() {
         waitForElementVisible(driver, CustomerInfoPageUI.GENDER_MALE_RADIO);
         return isElementSelected(driver, CustomerInfoPageUI.GENDER_MALE_RADIO);

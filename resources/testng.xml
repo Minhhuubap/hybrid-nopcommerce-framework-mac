@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Selenium Webdriver" verbose="1">
-    <test name = "Run on Firefox browser">
-        <parameter name ="browser" value ="firefox"/>
-        <groups>
-        <run>
-            <include name="webElement"/>
-        </run>
-        </groups>
+<!--    <test name = "Run on Firefox browser">-->
+<!--        <parameter name ="browser" value ="firefox"/>-->
+<!--        <groups>-->
+<!--        <run>-->
+<!--            <include name="webElement"/>-->
+<!--        </run>-->
+<!--        </groups>-->
 
+<!--        <classes>-->
+<!--            <class name="com.nopcommerce.users.LeveL_02_BasePage_TechPanda"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name = "Run on Firefox browser">
+        <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="com.nopcommerce.users.LeveL_02_BasePage_TechPanda"/>
+            <class name="com.nopcommerce.users.Level_04_Multiple_Browser"/>
+        </classes>
+    </test>
+
+    <test name = "Run on Chrome browser">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.nopcommerce.users.Level_04_Multiple_Browser"/>
         </classes>
     </test>
 
