@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c45876f-a88f-4696-9aaf-e2fdf4a3659a" name="Changes" comment="FRAMEWORK ON MAC">
-      <change afterPath="$PROJECT_DIR$/javaSDET/factoryPattern/CarFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javaSDET/factoryPattern/EndUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javaSDET/factoryPattern/FordHead.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javaSDET/factoryPattern/HondaHead.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javaSDET/factoryPattern/HuyndaiHead.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javaSDET/nonfactoryPattern/EndUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javaSDET/nonfactoryPattern/FordHead.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javaSDET/nonfactoryPattern/HondaHead.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javaSDET/nonfactoryPattern/HuyndaiHead.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/commons/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/pageObjects/LoginPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/LoginPageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hybrid-framework-mac.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hybrid-framework-mac.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/CustomerInfoPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/CustomerInfoPageUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/HomePageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/HomePageUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/RegisterPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/RegisterPageUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/users/Level_03_Page_Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/users/Level_03_Page_Object.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/users/Level_04_Multiple_Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/users/Level_04_Multiple_Browser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaSDET/factoryPattern/EndUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/javaSDET/factoryPattern/EndUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +125,15 @@
           <url>file://$PROJECT_DIR$/testcases/com/nopcommerce/users/LeveL_02_BasePage_TechPanda.java</url>
           <line>37</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>jar://$PROJECT_DIR$/../Selenium-webdriver-java-testng-mac/libaries/selenium-server-4.16.0.jar!/org/openqa/selenium/remote/RemoteWebDriver.class</url>
+          <line>250</line>
+          <properties class="org.openqa.selenium.remote.RemoteWebDriver" method="get">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
