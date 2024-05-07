@@ -21,10 +21,13 @@ import java.time.Duration;
 public class Level_04_Multiple_Browser extends BaseTest {
     //Declare variable
     private WebDriver driver;
+    
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
     private LoginPageObject loginPage;
     private CustomerInfoPageObject customerInfo;
+
+    private String firstName, lastName, day, month, year, emailAddress, companyName, password;
 
 
     @Parameters("browser")
@@ -37,6 +40,15 @@ public class Level_04_Multiple_Browser extends BaseTest {
 //       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         homePage = new HomePageObject(driver);
+
+        firstName = "Minh";
+        lastName = "Ta";
+        day = "12";
+        month = "5";
+        year = "1993";
+        emailAddress = "banhtrui" + generateRandomNumber() + "@gmail.com";
+        companyName = "ABC";
+        password = "Biboba123";
     }
 
     //Testcases
@@ -47,18 +59,18 @@ public class Level_04_Multiple_Browser extends BaseTest {
         registerPage = new RegisterPageObject(driver);
 
         registerPage.clickToMaleRadio();
-        registerPage.enterToFirstNameTextbox("");
-        registerPage.enterToLastNameTextbox("");
-        registerPage.selectDayDropdown("");
-        registerPage.selectMonthDropdown("");
-        registerPage.selectYearDropdown("");
-        registerPage.enterToEmailTextbox("");
-        registerPage.enterToCompanyTextbox("");
-        registerPage.enterToPasswordTextbox("");
-        registerPage.enterToConfirmPasswordTextbox("");
+        registerPage.enterToFirstNameTextbox(firstName);
+        registerPage.enterToLastNameTextbox(lastName);
+        registerPage.selectDayDropdown(day);
+        registerPage.selectMonthDropdown(month);
+        registerPage.selectYearDropdown(year);
+        registerPage.enterToEmailTextbox(emailAddress);
+        registerPage.enterToCompanyTextbox(companyName);
+        registerPage.enterToPasswordTextbox(password);
+        registerPage.enterToConfirmPasswordTextbox(password);
         registerPage.clickToRegisterButton();
 
-        Assert.assertEquals(registerPage.getRegisterSuccessMessage(),"Your register completed");
+        Assert.assertEquals(registerPage.getRegisterSuccessMessage(),"Your registration completed");
 
 
     }
@@ -69,8 +81,8 @@ public class Level_04_Multiple_Browser extends BaseTest {
 
         loginPage = new LoginPageObject(driver);
 
-        loginPage.enterToEmailTextbox("");
-        loginPage.enterToPasswordTextbox("");
+        loginPage.enterToEmailTextbox(emailAddress);
+        loginPage.enterToPasswordTextbox(password);
         loginPage.clickToLoginButton();
 
         homePage = new HomePageObject(driver);
@@ -84,16 +96,16 @@ public class Level_04_Multiple_Browser extends BaseTest {
 
         customerInfo = new CustomerInfoPageObject(driver);
 
-        Assert.assertEquals(customerInfo.isGenderMaleSelected(),"");
+        Assert.assertTrue(customerInfo.isGenderMaleSelected());
 
-        Assert.assertEquals(customerInfo.getFirstNameTextboxValue(),"");
-        Assert.assertEquals(customerInfo.getLastNameTextboxValue(),"");
-        Assert.assertEquals(customerInfo.getDayDropDownSeleStringctedValue(),"");
-        Assert.assertEquals(customerInfo.getMonthDropDownSelectedValue(),"");
-        Assert.assertEquals(customerInfo.getYearDropDownSelectedValue(),"");
-        Assert.assertEquals(customerInfo.getEmailTextboxValue(),"");
-        Assert.assertEquals(customerInfo.getCompanyTextboxValue(),"");
-
+        Assert.assertEquals(customerInfo.getFirstNameTextboxValue(),firstName);
+        Assert.assertEquals(customerInfo.getLastNameTextboxValue(),lastName);
+        Assert.assertEquals(customerInfo.getDayDropDownSeleStringctedValue(),day);
+        Assert.assertEquals(customerInfo.getMonthDropDownSelectedValue(),month);
+        Assert.assertEquals(customerInfo.getYearDropDownSelectedValue(),year);
+        Assert.assertEquals(customerInfo.getEmailTextboxValue(),emailAddress);
+        Assert.assertEquals(customerInfo.getCompanyTextboxValue(),companyName);
+//Bị fail mất phần Day/Month/Year vì drop down ở customerInfo không nhận data
 
 
 
@@ -104,3 +116,4 @@ public class Level_04_Multiple_Browser extends BaseTest {
 
     }
 }
+

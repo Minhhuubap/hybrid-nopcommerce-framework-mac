@@ -1,6 +1,7 @@
 package com.nopcommerce.users;
 
 import commons.BasePage;
+import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
@@ -15,13 +16,14 @@ import pageObjects.RegisterPageObject;
 import java.sql.Driver;
 import java.time.Duration;
 
-public class Level_03_Page_Object {
+public class Level_03_Page_Object extends BaseTest {
     //Declare variable
     private WebDriver driver;
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
     private LoginPageObject loginPage;
     private CustomerInfoPageObject customerInfo;
+    private String firstName, lastName, day, month, year, emailAddress, companyName, password;
 
 
 
@@ -32,11 +34,20 @@ public class Level_03_Page_Object {
         driver = new FirefoxDriver();           //Driver cần được truyền duy nhât 1 lần, ko cần new nhièu
 
         //Open URL -> qua Home Page
-        driver.get("");
+        driver.get("https://demo.nopcommerce.com/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         //Khởi tạo page và bắt đầu làm action của page đó
         homePage = new HomePageObject(driver);      //Biến driver = new FireFox
+
+        firstName = "Minh";
+        lastName = "Ta";
+        day = "12";
+        month = "5";
+        year = "1993";
+        emailAddress = "banhtrui" + generateRandomNumber() + "@gmail.com";      //Hàm ở đây dùng extends trong BaseTest
+        companyName = "ABC";
+        password = "Biboba123";
     }
 
     //Testcases
@@ -49,18 +60,18 @@ public class Level_03_Page_Object {
         registerPage = new RegisterPageObject(driver);
 
         registerPage.clickToMaleRadio();
-        registerPage.enterToFirstNameTextbox("");
-        registerPage.enterToLastNameTextbox("");
-        registerPage.selectDayDropdown("");
-        registerPage.selectMonthDropdown("");
-        registerPage.selectYearDropdown("");
-        registerPage.enterToEmailTextbox("");
-        registerPage.enterToCompanyTextbox("");
-        registerPage.enterToPasswordTextbox("");
-        registerPage.enterToConfirmPasswordTextbox("");
+        registerPage.enterToFirstNameTextbox(firstName);
+        registerPage.enterToLastNameTextbox(lastName);
+        registerPage.selectDayDropdown(day);
+        registerPage.selectMonthDropdown(month);
+        registerPage.selectYearDropdown(year);
+        registerPage.enterToEmailTextbox(emailAddress);
+        registerPage.enterToCompanyTextbox(companyName);
+        registerPage.enterToPasswordTextbox(password);
+        registerPage.enterToConfirmPasswordTextbox(password);
         registerPage.clickToRegisterButton();
 
-        Assert.assertEquals(registerPage.getRegisterSuccessMessage(),"Your register completed");
+        Assert.assertEquals(registerPage.getRegisterSuccessMessage(),"Your registration completed");
 
 
     }
@@ -71,8 +82,8 @@ public class Level_03_Page_Object {
 
         loginPage = new LoginPageObject(driver);
 
-        loginPage.enterToEmailTextbox("");
-        loginPage.enterToPasswordTextbox("");
+        loginPage.enterToEmailTextbox(emailAddress);
+        loginPage.enterToPasswordTextbox(password);
         loginPage.clickToLoginButton();
 
         homePage = new HomePageObject(driver);
@@ -87,18 +98,15 @@ public class Level_03_Page_Object {
 
         customerInfo = new CustomerInfoPageObject(driver);            //Nếu không map driver thì mỗi lần new TE ko có driver được tạo?
 
-        Assert.assertEquals(customerInfo.isGenderMaleSelected(),"");
+        Assert.assertEquals(customerInfo.isGenderMaleSelected(),"Male");
 
-        Assert.assertEquals(customerInfo.getFirstNameTextboxValue(),"");
-        Assert.assertEquals(customerInfo.getLastNameTextboxValue(),"");
-        Assert.assertEquals(customerInfo.getDayDropDownSeleStringctedValue(),"");
-        Assert.assertEquals(customerInfo.getMonthDropDownSelectedValue(),"");
-        Assert.assertEquals(customerInfo.getYearDropDownSelectedValue(),"");
-        Assert.assertEquals(customerInfo.getEmailTextboxValue(),"");
-        Assert.assertEquals(customerInfo.getCompanyTextboxValue(),"");
-
-
-
+        Assert.assertEquals(customerInfo.getFirstNameTextboxValue(),firstName);
+        Assert.assertEquals(customerInfo.getLastNameTextboxValue(),lastName);
+        Assert.assertEquals(customerInfo.getDayDropDownSeleStringctedValue(),day);
+        Assert.assertEquals(customerInfo.getMonthDropDownSelectedValue(),month);
+        Assert.assertEquals(customerInfo.getYearDropDownSelectedValue(),year);
+        Assert.assertEquals(customerInfo.getEmailTextboxValue(),emailAddress);
+        Assert.assertEquals(customerInfo.getCompanyTextboxValue(),companyName);
 
     }
 
