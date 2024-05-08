@@ -1,22 +1,16 @@
 package com.nopcommerce.users;
 import commons.BasePage;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeGroups;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 
-public class LeveL_02_BasePage_TechPanda { //Hoặc để class này extends BasePage -> Không cần phải lôi basePage.
+public class Level_02_BasePage_TechPanda { //Hoặc để class này extends BasePage -> Không cần phải lôi basePage.
      BasePage basePage;
      WebDriver driver;
      Random rand = new Random();
