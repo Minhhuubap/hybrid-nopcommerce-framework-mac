@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c45876f-a88f-4696-9aaf-e2fdf4a3659a" name="Changes" comment="FRAMEWORK ON MAC">
-      <change afterPath="$PROJECT_DIR$/actions/PageFactory/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/PageFactory/CustomerInfoPageFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/PageFactory/HomePageFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/PageFactory/LoginPageFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/PageFactory/RegisterPageFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/users/Level_05_PageFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javaSDET/factoryPattern/EndUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/javaSDET/factoryPattern/EndUser.java" afterDir="false" />
-    </list>
+    <list default="true" id="0c45876f-a88f-4696-9aaf-e2fdf4a3659a" name="Changes" comment="FRAMEWORK ON MAC" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +62,7 @@
       <recent name="nonfactoryPattern" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test_2">
+  <component name="RunManager" selected="TestNG.Level_05_PageFactory.User_01_Register">
     <configuration name="EndUser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="factoryPattern.EndUser" />
       <module name="hybrid-framework-mac" />
@@ -116,6 +107,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Level_05_PageFactory.User_01_Register" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="hybrid-framework-mac" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nopcommerce.users.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nopcommerce.users" />
+      <option name="MAIN_CLASS_NAME" value="com.nopcommerce.users.Level_05_PageFactory" />
+      <option name="METHOD_NAME" value="User_01_Register" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="/Users/administration/Documents/Selenium-29/Project/hybrid-nopcommerce-framework-mac/resources/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hybrid-framework-mac" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/testng.xml" />
@@ -128,6 +137,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Level_05_PageFactory.User_01_Register" />
         <item itemvalue="Application.Test_2" />
         <item itemvalue="Application.EndUser" />
         <item itemvalue="TestNG.Level_03_Page_Object.User_01_Register" />
@@ -144,7 +154,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/testcases/com/nopcommerce/users/LeveL_02_BasePage_TechPanda.java</url>
+          <url>file://$PROJECT_DIR$/testcases/com/nopcommerce/users/Level_02_BasePage_TechPanda.java</url>
           <line>37</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -156,6 +166,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/testcases/com/nopcommerce/users/Level_05_PageFactory.java</url>
+          <line>56</line>
+          <properties class="com.nopcommerce.users.Level_05_PageFactory" method="User_01_Register">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

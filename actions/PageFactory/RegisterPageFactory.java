@@ -31,7 +31,7 @@ public class RegisterPageFactory extends BasePage {
     @FindBy(xpath = "//input[@id='Company']" )
     private WebElement companyNameTextBox;
 
-    @FindBy(xpath = "//input[@id='Company']" )
+    @FindBy(xpath = "//input[@id='Password']" )
     private WebElement passwordTextbox;
 
     @FindBy(xpath = "//input[@id='ConfirmPassword']" )

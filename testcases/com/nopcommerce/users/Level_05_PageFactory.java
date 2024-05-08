@@ -45,7 +45,7 @@ public class Level_05_PageFactory extends BaseTest {
         firstName = "Minh";
         lastName = "Ta";
         day = "12";
-        month = "5";
+        month = "May";
         year = "1993";
         emailAddress = "banhtrui" + generateRandomNumber() + "@gmail.com";      //Hàm ở đây dùng extends trong BaseTest
         companyName = "ABC";
