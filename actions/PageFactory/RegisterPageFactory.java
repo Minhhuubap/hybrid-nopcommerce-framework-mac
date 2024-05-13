@@ -116,8 +116,9 @@ public class RegisterPageFactory extends BasePage {
         return registerSuccessMessage.getText();
     }
 
-    public void clickToLoginButton() {
+    public LoginPageFactory clickToLoginButton() {
         waitForElementClickable(driver,loginButton);
         loginButton.click();
+        return new LoginPageFactory(driver);            //hàm này cho phần page Navigate -> tính Encapsulate đóng gói collapse giữa 2 methods.
     }
 }

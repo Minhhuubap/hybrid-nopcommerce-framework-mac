@@ -2,6 +2,7 @@ package PageFactory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -14,6 +15,7 @@ public class CustomerInfoPageFactory extends BasePage {
     }
 
     @FindBy(xpath = "//input[@id='gender-male']")
+    @CacheLookup    //Tìm 1 lần
     private WebElement genderMaleRadio;
 
     @FindBy(xpath = "//input[@id='FirstName']")

@@ -14,9 +14,10 @@ public class HomePageObject extends BasePage {
     }   //Constructor
 
 
-    public void clickToRegisterLink() {
+    public RegisterPageObject clickToRegisterLink() {
         waitForElementClickable(driver, HomePageUI.REGISTER_LINK);
         clickToElement(driver, HomePageUI.REGISTER_LINK);
+        return new RegisterPageObject(driver);
     }
 
     public boolean isMyAccountLinkDisplayed() {
@@ -25,9 +26,10 @@ public class HomePageObject extends BasePage {
         //chỗ này false vì hàm assertTrue bên kia nếu để hàm này true thì sẽ luôn true, ko check
     }
 
-    public void clickToMyAccountLink() {
+    public CustomerInfoPageObject clickToMyAccountLink() {
         waitForElementClickable(driver, HomePageUI.MY_ACCOUNT_LINK);
         clickToElement(driver, HomePageUI.MY_ACCOUNT_LINK);
+        return new CustomerInfoPageObject(driver);
     }
 }
 
