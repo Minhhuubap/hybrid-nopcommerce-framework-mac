@@ -4,72 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c45876f-a88f-4696-9aaf-e2fdf4a3659a" name="Changes" comment="FRAMEWORK ON MAC">
-      <change afterPath="$PROJECT_DIR$/actions/pageObjects/PageGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/selenium-server-4.20.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/auto-service-annotations-1.1.1-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/bcpkix-jdk18on-1.78.1-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/bcprov-jdk18on-1.78.1-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/bcutil-jdk18on-1.78.1-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/byte-buddy-1.14.14-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/checker-qual-3.42.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/commons-exec-1.4.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/error_prone_annotations-2.26.1-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/failsafe-3.3.2-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/failureaccess-1.0.2-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/graphql-java-20.2-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/guava-33.1.0-jre-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/j2objc-annotations-3.0.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/java-dataloader-3.2.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/jcommander-1.82-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/jeromq-0.6.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/jnacl-1.0.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/jsr305-3.0.2-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/jtoml-2.0.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/netty-buffer-4.1.109.Final-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/netty-codec-4.1.109.Final-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/netty-codec-http-4.1.109.Final-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/netty-common-4.1.109.Final-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/netty-handler-4.1.109.Final-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/netty-resolver-4.1.109.Final-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/netty-transport-4.1.109.Final-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/netty-transport-native-unix-common-4.1.109.Final-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/opentelemetry-api-1.37.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/opentelemetry-api-incubator-1.37.0-alpha-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/opentelemetry-context-1.37.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/opentelemetry-exporter-logging-1.37.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/opentelemetry-sdk-1.37.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/opentelemetry-sdk-common-1.37.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/opentelemetry-sdk-extension-autoconfigure-1.37.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/opentelemetry-sdk-extension-autoconfigure-spi-1.37.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/opentelemetry-sdk-logs-1.37.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/opentelemetry-sdk-metrics-1.37.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/opentelemetry-sdk-trace-1.37.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/opentelemetry-semconv-1.25.0-alpha-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/reactive-streams-1.0.4-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/selenium-api-4.20.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/selenium-chrome-driver-4.20.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/selenium-chromium-driver-4.20.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/selenium-devtools-v85-4.20.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/selenium-edge-driver-4.20.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/selenium-firefox-driver-4.20.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/selenium-grid-4.20.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/selenium-http-4.20.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/selenium-ie-driver-4.20.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/selenium-json-4.20.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/selenium-manager-4.20.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/selenium-os-4.20.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/selenium-remote-driver-4.20.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/selenium-safari-driver-4.20.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/selenium-support-4.20.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sourceDocs/slf4j-api-2.0.13-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/users/Level_05_PageFactory_Page_Navigator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/selenium_api_4_11_0_sources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/selenium_api_4_11_0_sources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/PageFactory/CustomerInfoPageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/PageFactory/CustomerInfoPageFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/PageFactory/HomePageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/PageFactory/HomePageFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions/PageFactory/RegisterPageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/PageFactory/RegisterPageFactory.java" afterDir="false" />
-    </list>
+    <list default="true" id="0c45876f-a88f-4696-9aaf-e2fdf4a3659a" name="Changes" comment="FRAMEWORK ON MAC" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

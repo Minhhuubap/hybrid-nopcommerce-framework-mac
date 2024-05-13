@@ -7,10 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pageObjects.CustomerInfoPageObject;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.RegisterPageObject;
+import pageObjects.*;
 
 import java.time.Duration;
 
@@ -36,7 +33,9 @@ public class Level_03_Page_Object_Page_Navigator extends BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         //Khởi tạo page và bắt đầu làm action của page đó
-        homePage = new HomePageObject(driver);      //Biến driver = new FireFox
+//        homePage = new HomePageObject(driver);      //Biến driver = new FireFox
+
+        homePage = PageGenerator_PageOb.getHomePage(driver);        //Giấu khởi tạo new Page theo tính Encapsulate
 
         firstName = "Minh";
         lastName = "Ta";
