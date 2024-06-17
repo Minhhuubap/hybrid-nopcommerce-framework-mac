@@ -1,6 +1,5 @@
 package PageFactory;
 
-import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,7 +24,7 @@ public class HomePageFactory extends BasePage {
         PageFactory.initElements(driver, this);
         //truyền driver vào vẫn đúng vì nó là con của SearchContext
     }
-    public RegisterPageFactory clickToRegisterLink() {
+    public RegisterPageFactory openRegisterPage() {
         waitForElementClickable(driver,registerLink);
         clickToElement(registerLink);   //tham số là element
         return new RegisterPageFactory(driver);     //hàm này cho phần page Navigate -> tính Encapsulate đóng gói collapse giữa 2 methods.
@@ -36,7 +35,7 @@ public class HomePageFactory extends BasePage {
         return isElementDisplayed(myAccountLink);
     }
 
-    public CustomerInfoPageFactory clickToMyAccountLink() {
+    public CustomerInfoPageFactory openMyAccountPage() {
         waitForElementClickable(driver, myAccountLink);
         clickToElement(myAccountLink);
         return new CustomerInfoPageFactory(driver);

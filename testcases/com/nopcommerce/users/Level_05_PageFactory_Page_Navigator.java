@@ -59,7 +59,7 @@ public class Level_05_PageFactory_Page_Navigator extends BaseTest {
 //        //homePage -> registerpage -> new registerPage
 //        registerPage = new RegisterPageFactory(driver);
 
-        registerPage = homePage.clickToRegisterLink();  //hàm này cho phần page Navigate, khởi tạo new driver Page trong method clickToRegisterLink
+        registerPage = homePage.openRegisterPage();  //hàm này cho phần page Navigate, khởi tạo new driver Page trong method clickToRegisterLink
 
         registerPage.clickToMaleRadio();
         registerPage.enterToFirstNameTextbox(firstName);
@@ -82,7 +82,7 @@ public class Level_05_PageFactory_Page_Navigator extends BaseTest {
     public void User_02_Login() {
 //        registerPage.clickToLoginButton();
 //        loginPage = new LoginPageFactory(driver);
-        loginPage = registerPage.clickToLoginButton();      //hàm này cho phần page Navigate, khởi tạo new driver Page trong method clickToLoginButton
+        loginPage = registerPage.openLoginPage();      //hàm này cho phần page Navigate, khởi tạo new driver Page trong method clickToLoginButton
 
 
         loginPage.enterToEmailTextbox(emailAddress);
@@ -100,7 +100,7 @@ public class Level_05_PageFactory_Page_Navigator extends BaseTest {
 //        homePage.clickToMyAccountLink();
 //        customerInfo = new CustomerInfoPageFactory(driver);
 
-        customerInfo = homePage.clickToMyAccountLink();     //hàm này cho phần page Navigate, khởi tạo new driver Page trong method clickToMyAccountLink
+        customerInfo = homePage.openMyAccountPage();     //hàm này cho phần page Navigate, khởi tạo new driver Page trong method clickToMyAccountLink
 
         Assert.assertEquals(customerInfo.isGenderMaleSelected(),"Male");
 

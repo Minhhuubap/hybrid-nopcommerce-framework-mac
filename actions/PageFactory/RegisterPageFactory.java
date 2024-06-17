@@ -3,7 +3,6 @@ package PageFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.*;
-import org.testng.Assert;
 
 public class RegisterPageFactory extends BasePage {
     private WebDriver driver;
@@ -116,7 +115,7 @@ public class RegisterPageFactory extends BasePage {
         return registerSuccessMessage.getText();
     }
 
-    public LoginPageFactory clickToLoginButton() {
+    public LoginPageFactory openLoginPage() {
         waitForElementClickable(driver,loginButton);
         loginButton.click();
         return new LoginPageFactory(driver);            //hàm này cho phần page Navigate -> tính Encapsulate đóng gói collapse giữa 2 methods.

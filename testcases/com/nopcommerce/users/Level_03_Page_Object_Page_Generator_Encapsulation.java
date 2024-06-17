@@ -1,9 +1,5 @@
 package com.nopcommerce.users;
 
-import PageFactory.CustomerInfoPageFactory;
-import PageFactory.HomePageFactory;
-import PageFactory.LoginPageFactory;
-import PageFactory.RegisterPageFactory;
 import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -11,16 +7,17 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import pageObjects.*;
 
 import java.time.Duration;
 
-public class Level_05_PageFactory extends BaseTest {
+public class Level_03_Page_Object_Page_Generator_Encapsulation extends BaseTest {
     //Declare variable
     private WebDriver driver;
-    private HomePageFactory homePage;
-    private RegisterPageFactory registerPage;
-    private LoginPageFactory loginPage;
-    private CustomerInfoPageFactory customerInfo;
+    private HomePageObject homePage;
+    private RegisterPageObject registerPage;
+    private LoginPageObject loginPage;
+    private CustomerInfoPageObject customerInfo;
     private String firstName, lastName, day, month, year, emailAddress, companyName, password;
 
 
@@ -29,19 +26,21 @@ public class Level_05_PageFactory extends BaseTest {
 
     @BeforeClass
     public void beforeClass() {
-        driver = new FirefoxDriver();           //Driver cần được truyền duy nhât 1 lần, ko cần new nhièu
+        driver = new FirefoxDriver();
 
         //Open URL -> qua Home Page
         driver.get("https://demo.nopcommerce.com/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         //Khởi tạo page và bắt đầu làm action của page đó
-        homePage = new HomePageFactory(driver);      //Biến driver = new FireFox
+//        homePage = new HomePageObject(driver);      //Biến driver = new FireFox
+
+        homePage = PageGenerator_PageOb.getHomePage(driver);        //Giấu khởi tạo new Page theo tính Encapsulate
 
         firstName = "Minh";
         lastName = "Ta";
         day = "12";
-        month = "May";
+        month = "5";
         year = "1993";
         emailAddress = "banhtrui" + generateRandomNumber() + "@gmail.com";      //Hàm ở đây dùng extends trong BaseTest
         companyName = "ABC";
@@ -51,11 +50,12 @@ public class Level_05_PageFactory extends BaseTest {
     //Testcases
     @Test
     public void User_01_Register() {
-        //Action 1
-        homePage.openRegisterPage();             //Biến driver nhảy vào hàm clickToRegisterLink ở HomePageObject -> biến driver nhảy vào method Wait của BaseP
+//        //Action 1
+//        homePage.clickToRegisterLink();
+//        //homePage -> registerpage -> new registerPage
+//        registerPage = new RegisterPageObject(driver);
 
-        //homePage -> registerpage -> new registerPage
-        registerPage = new RegisterPageFactory(driver);
+        registerPage = homePage.clickToRegisterLink();
 
         registerPage.clickToMaleRadio();
         registerPage.enterToFirstNameTextbox(firstName);
@@ -76,15 +76,16 @@ public class Level_05_PageFactory extends BaseTest {
 
     @Test
     public void User_02_Login() {
-        registerPage.openLoginPage();
+//        registerPage.clickToLoginButton();
+//        loginPage = new LoginPageObject(driver);
 
-        loginPage = new LoginPageFactory(driver);
+        loginPage = registerPage.clickToLoginButton();
 
         loginPage.enterToEmailTextbox(emailAddress);
         loginPage.enterToPasswordTextbox(password);
         loginPage.clickToLoginButton();
 
-        homePage = new HomePageFactory(driver);
+        homePage = new HomePageObject(driver);
 
         Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
     }
@@ -92,15 +93,15 @@ public class Level_05_PageFactory extends BaseTest {
     @Test
     public void User_03_MyAccount() {
         //Home page -> customer info
-        homePage.openMyAccountPage();
+//        homePage.clickToMyAccountLink();
+//        customerInfo = new CustomerInfoPageObject(driver);
 
-        customerInfo = new CustomerInfoPageFactory(driver);            //Nếu không map driver thì mỗi lần new TE ko có driver được tạo?
+        customerInfo = homePage.clickToMyAccountLink();
 
         Assert.assertEquals(customerInfo.isGenderMaleSelected(),"Male");
-
         Assert.assertEquals(customerInfo.getFirstNameTextboxValue(),firstName);
         Assert.assertEquals(customerInfo.getLastNameTextboxValue(),lastName);
-        Assert.assertEquals(customerInfo.getDayDropDownSelectedValue(),day);
+        Assert.assertEquals(customerInfo.getDayDropDownSeleStringctedValue(),day);
         Assert.assertEquals(customerInfo.getMonthDropDownSelectedValue(),month);
         Assert.assertEquals(customerInfo.getYearDropDownSelectedValue(),year);
         Assert.assertEquals(customerInfo.getEmailTextboxValue(),emailAddress);

@@ -7,4 +7,5 @@ public class PageGenerator{
     public static HomePageFactory getHomePage(WebDriver driver) {
         return new HomePageFactory(driver);
     }
+
 }

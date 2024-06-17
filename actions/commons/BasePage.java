@@ -6,11 +6,15 @@ import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageObjects.*;
+import pageUIs.*;
 
 import java.time.Duration;
 import java.util.List;
 
 public class BasePage {
+
+
 
     public void openPageURL(WebDriver driver, String URL) {
         driver.get(URL);
@@ -227,5 +231,26 @@ public class BasePage {
         new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
     }
 
-    //
+
+    // Phần dưới này dành cho switch Page, ném hết methods openPage vào BasePage; Còn Page UI locator dùng chung thì cho vào BasePageUI
+//    public AddressPageObject openAddressPage(WebDriver driver) {
+//        clickToElement(driver, BasePageUI.ADDRESS_LINK);
+//        return PageGenarator_SwitchPage.getAddressPage(driver);
+//    }
+//
+//    public OrderPageObject openOrderPage(WebDriver driver) {
+//        clickToElement(driver, BasePageUI.ORDER_LINK);
+//        return PageGenarator_SwitchPage.getOrderPage(driver);
+//    }
+//
+//    public RewardPointPageObject openRewardPointPage(WebDriver driver) {
+//        clickToElement(driver, BasePageUI.REWARDPOINT_LINK);
+//        return PageGenarator_SwitchPage.getRewardPoint(driver);
+//    }
+//
+//    public CustomerInfoPageObject openCustomerInfoPage(WebDriver driver) {
+//        clickToElement(driver, BasePageUI.CUSTOMERINFO_LINK);
+//        return PageGenarator_SwitchPage.getCustomerInfo(driver);
+//    }
+
 }

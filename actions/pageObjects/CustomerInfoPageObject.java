@@ -2,11 +2,13 @@ package pageObjects;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
+import pageUIs.AddressPageUI;
 import pageUIs.CustomerInfoPageUI;
 
-public class CustomerInfoPageObject extends BasePage {
+public class CustomerInfoPageObject extends SideBarPageObject {
     private WebDriver driver;
     public CustomerInfoPageObject(WebDriver driver){
+        super(driver);
         this.driver = driver;
     }
     public boolean isGenderMaleSelected() {
@@ -42,4 +44,12 @@ public class CustomerInfoPageObject extends BasePage {
     public String getCompanyTextboxValue() {
         return getAttribute(driver, CustomerInfoPageUI.COMPANY_TEXTBOX, "value");
     }
+
+    /*
+    public AddressPageObject openAddressPage() {
+        clickToElement(driver, CustomerInfoPageUI.ADDRESS_LINK);
+        return PageGenarator_SwitchPage.getAddressPage(driver);
+    }
+//Phần này đã bị comment lại vì chuyển sang dùng BasePage/ BasePAgeUI cho đỡ trùng lặp, tạo nhiều lần
+     */
 }

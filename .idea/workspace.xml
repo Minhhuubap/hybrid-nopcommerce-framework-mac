@@ -4,7 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c45876f-a88f-4696-9aaf-e2fdf4a3659a" name="Changes" comment="FRAMEWORK ON MAC" />
+    <list default="true" id="0c45876f-a88f-4696-9aaf-e2fdf4a3659a" name="Changes" comment="FRAMEWORK ON MAC">
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/AddressPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/OrderPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/PageGenarator_SwitchPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/RewardPointPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/pageObjects/SideBarPageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/AddressPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/BasePageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/OrderPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/RewardPointPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/pageUIs/SideBarPageUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaSDET/javaInheritance/BasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaSDET/javaInheritance/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaSDET/javaInheritance/OrderPO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaSDET/javaInheritance/SideBarPO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/users/Level_06_Switch_Page_Object.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/users/Level_07_Page_Navigation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/PageFactory/CustomerInfoPageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/PageFactory/CustomerInfoPageFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/PageFactory/HomePageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/PageFactory/HomePageFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/PageFactory/PageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/PageFactory/PageGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/PageFactory/RegisterPageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/PageFactory/RegisterPageFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/commons/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/commons/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/CustomerInfoPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/CustomerInfoPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/pageObjects/PageGenerator_PageOb.java" beforeDir="false" afterPath="$PROJECT_DIR$/actions/pageObjects/PageGenerator_PageOb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/pageUIs/CustomerInfoPageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/pageUIs/CustomerInfoPageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/users/Level_03_Page_Object_Page_Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/users/Level_03_Page_Object_Page_Generator_Encapsulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/users/Level_05_PageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/users/Level_05_PageFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/com/nopcommerce/users/Level_05_PageFactory_Page_Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/com/nopcommerce/users/Level_05_PageFactory_Page_Navigator.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,25 +61,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/administration/Documents/Selenium-29/Project/hybrid-nopcommerce-framework-mac/sourceDocs",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2637486",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/administration/Documents/Selenium-29/Project/hybrid-nopcommerce-framework-mac/sourceDocs&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2637486&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory",
-      "module"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sourceDocs" />
@@ -61,25 +90,13 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.nopcommerce.users" />
+      <recent name="javaInheritance" />
+      <recent name="pageUIs" />
+      <recent name="pageObjects" />
       <recent name="PageFactory" />
-      <recent name="factoryPattern" />
-      <recent name="nonfactoryPattern" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Level_05_PageFactory.User_01_Register">
-    <configuration name="EndUser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="factoryPattern.EndUser" />
-      <module name="hybrid-framework-mac" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="factoryPattern.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.Level_07_Page_Navigation">
     <configuration name="Test_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pageObjects.Test_2" />
       <module name="hybrid-framework-mac" />
@@ -89,24 +106,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Level_03_Page_Object.User_01_Register" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="hybrid-framework-mac" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.nopcommerce.users.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.nopcommerce.users" />
-      <option name="MAIN_CLASS_NAME" value="com.nopcommerce.users.Level_03_Page_Object" />
-      <option name="METHOD_NAME" value="User_01_Register" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -129,10 +128,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="/Users/administration/Documents/Selenium-29/Project/hybrid-nopcommerce-framework-mac/resources/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Level_06_Switch_Page_Object" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="hybrid-framework-mac" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/resources/testng.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nopcommerce.users.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nopcommerce.users" />
+      <option name="MAIN_CLASS_NAME" value="com.nopcommerce.users.Level_06_Switch_Page_Object" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Level_07_Page_Navigation" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="hybrid-framework-mac" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nopcommerce.users.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nopcommerce.users" />
+      <option name="MAIN_CLASS_NAME" value="com.nopcommerce.users.Level_07_Page_Navigation" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Level_07_Page_Navigation.User_04_Switch_Page" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="hybrid-framework-mac" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nopcommerce.users.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nopcommerce.users" />
+      <option name="MAIN_CLASS_NAME" value="com.nopcommerce.users.Level_07_Page_Navigation" />
+      <option name="METHOD_NAME" value="User_04_Switch_Page" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -141,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Level_07_Page_Navigation" />
+        <item itemvalue="TestNG.Level_07_Page_Navigation.User_04_Switch_Page" />
+        <item itemvalue="TestNG.Level_06_Switch_Page_Object" />
         <item itemvalue="TestNG.Level_05_PageFactory.User_01_Register" />
         <item itemvalue="Application.Test_2" />
-        <item itemvalue="Application.EndUser" />
-        <item itemvalue="TestNG.Level_03_Page_Object.User_01_Register" />
-        <item itemvalue="TestNG./Users/administration/Documents/Selenium-29/Project/hybrid-nopcommerce-framework-mac/resources/testng.xml" />
       </list>
     </recent_temporary>
   </component>

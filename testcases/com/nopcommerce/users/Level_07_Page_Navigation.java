@@ -11,7 +11,7 @@ import pageObjects.*;
 
 import java.time.Duration;
 
-public class Level_03_Page_Object_Page_Navigator extends BaseTest {
+public class Level_07_Page_Navigation extends BaseTest {
     //Declare variable
     private WebDriver driver;
     private HomePageObject homePage;
@@ -19,6 +19,9 @@ public class Level_03_Page_Object_Page_Navigator extends BaseTest {
     private LoginPageObject loginPage;
     private CustomerInfoPageObject customerInfo;
     private String firstName, lastName, day, month, year, emailAddress, companyName, password;
+    private AddressPageObject addressPage;
+    private OrderPageObject orderPage;
+    private RewardPointPageObject rewardPointPage;
 
 
 
@@ -57,7 +60,7 @@ public class Level_03_Page_Object_Page_Navigator extends BaseTest {
 
         registerPage = homePage.clickToRegisterLink();
 
-        registerPage.clickToMaleRadio();
+        registerPage.clickToMaleRadio();                            //Vì sao lấy được registerPage chấm method? Vì registerPage là đối tượng mới được khởi tạo new RegisterPageOBject -> dùng method bằng cách gọi . như thường
         registerPage.enterToFirstNameTextbox(firstName);
         registerPage.enterToLastNameTextbox(lastName);
         registerPage.selectDayDropdown(day);
@@ -79,7 +82,7 @@ public class Level_03_Page_Object_Page_Navigator extends BaseTest {
 //        registerPage.clickToLoginButton();
 //        loginPage = new LoginPageObject(driver);
 
-        loginPage = registerPage.clickToLoginButton();
+        loginPage = registerPage.clickToLoginButton();          //Lỗi login XPATH
 
         loginPage.enterToEmailTextbox(emailAddress);
         loginPage.enterToPasswordTextbox(password);
@@ -98,7 +101,7 @@ public class Level_03_Page_Object_Page_Navigator extends BaseTest {
 
         customerInfo = homePage.clickToMyAccountLink();
 
-        Assert.assertEquals(customerInfo.isGenderMaleSelected(),"Male");
+        Assert.assertTrue(customerInfo.isGenderMaleSelected(),"?");     //Lỗi chỗ này expected result khác
         Assert.assertEquals(customerInfo.getFirstNameTextboxValue(),firstName);
         Assert.assertEquals(customerInfo.getLastNameTextboxValue(),lastName);
         Assert.assertEquals(customerInfo.getDayDropDownSeleStringctedValue(),day);
@@ -107,6 +110,25 @@ public class Level_03_Page_Object_Page_Navigator extends BaseTest {
         Assert.assertEquals(customerInfo.getEmailTextboxValue(),emailAddress);
         Assert.assertEquals(customerInfo.getCompanyTextboxValue(),companyName);
 
+    }
+
+    @Test
+    public void User_04_Switch_Page() {
+        // Customer Info -> Address
+        addressPage = customerInfo.openAddressPage();
+        //Đoạn này tạo mới method openAddressPage bị tạo nhầm vào phần của customerInfo trong PageFactory; vì customerInfo phía trên nó đã nằm trong mục PageOBject/PageFactory
+
+        // Address -> RewardPoint
+        rewardPointPage = addressPage.openRewardPointPage();
+
+        // RewardPoint -> Order
+        orderPage = rewardPointPage.openOrderPage();
+
+        //Order -> Address
+        addressPage = orderPage.openAddressPage();
+
+        //Address - > CustomerInfo
+        customerInfo = addressPage.openCustomerInfoPage();
     }
 
     //Post-condition
