@@ -14,17 +14,27 @@
 <!--        </classes>-->
 <!--    </test>-->
 
+<!--    <test name = "Run on Firefox browser">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <classes>-->
+<!--            <class name="com.nopcommerce.users.Level_04_Multiple_Browser"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name = "Run on Chrome browser">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <classes>-->
+<!--            <class name="com.nopcommerce.users.Level_04_Multiple_Browser"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <parameter name="userURL" value="https://demo.nopcommerce.com/"/>
+    <parameter name="adminURL" value="https://admin-demo.nopcommerce.com/"/>
+
     <test name = "Run on Firefox browser">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="com.nopcommerce.users.Level_04_Multiple_Browser"/>
-        </classes>
-    </test>
-
-    <test name = "Run on Chrome browser">
-        <parameter name="browser" value="chrome"/>
-        <classes>
-            <class name="com.nopcommerce.users.Level_04_Multiple_Browser"/>
+            <class name="com.nopcommerce.users.Level_08_Switch_Site_URL"/>
         </classes>
     </test>
 

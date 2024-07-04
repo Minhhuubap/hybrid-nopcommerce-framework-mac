@@ -8,20 +8,21 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pageObjects.*;
+import pageObjects.users.*;
 
 import java.time.Duration;
 
 public class Level_07_Page_Navigation extends BaseTest {
     //Declare variable
     private WebDriver driver;
-    private HomePageObject homePage;
-    private RegisterPageObject registerPage;
-    private LoginPageObject loginPage;
-    private CustomerInfoPageObject customerInfo;
+    private UserHomePO homePage;
+    private UserRegisterPO registerPage;
+    private UserLoginPO loginPage;
+    private UserCustomerInfoPO customerInfo;
     private String firstName, lastName, day, month, year, emailAddress, companyName, password;
-    private AddressPageObject addressPage;
-    private OrderPageObject orderPage;
-    private RewardPointPageObject rewardPointPage;
+    private UserAddressPO addressPage;
+    private UserOrderPO orderPage;
+    private UserRewardPointPO rewardPointPage;
 
 
 
@@ -82,13 +83,13 @@ public class Level_07_Page_Navigation extends BaseTest {
 //        registerPage.clickToLoginButton();
 //        loginPage = new LoginPageObject(driver);
 
-        loginPage = registerPage.clickToLoginButton();          //Lỗi login XPATH
+        loginPage = registerPage.openLoginPage();          //Lỗi login XPATH
 
         loginPage.enterToEmailTextbox(emailAddress);
         loginPage.enterToPasswordTextbox(password);
         loginPage.clickToLoginButton();
 
-        homePage = new HomePageObject(driver);
+        homePage = new UserHomePO(driver);
 
         Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
     }

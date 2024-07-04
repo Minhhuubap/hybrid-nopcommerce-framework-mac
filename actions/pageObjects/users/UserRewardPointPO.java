@@ -1,12 +1,10 @@
-package pageObjects;
+package pageObjects.users;
 
-import commons.BasePage;
 import org.openqa.selenium.WebDriver;
-import pageUIs.RewardPointPageUI;
 
-public class RewardPointPageObject extends SideBarPageObject {          //Trước đó là extends BasePage
+public class UserRewardPointPO extends UserSideBarPO {          //Trước đó là extends BasePage
     private WebDriver driver;
-    public RewardPointPageObject(WebDriver driver){
+    public UserRewardPointPO(WebDriver driver){
         super(driver);
         this.driver = driver;
     }

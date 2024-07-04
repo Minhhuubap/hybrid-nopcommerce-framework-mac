@@ -1,10 +1,11 @@
 package pageObjects;
 
 import org.openqa.selenium.WebDriver;
+import pageObjects.users.UserHomePO;
 
 public class PageGenerator_PageOb {
-    public static HomePageObject getHomePage(WebDriver driver) {
-        return new HomePageObject(driver);
+    public static UserHomePO getHomePage(WebDriver driver) {
+        return new UserHomePO(driver);
     }
 
 

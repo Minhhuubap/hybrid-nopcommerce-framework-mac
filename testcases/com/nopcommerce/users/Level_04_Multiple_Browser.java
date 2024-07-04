@@ -1,31 +1,25 @@
 package com.nopcommerce.users;
 
-import commons.BasePage;
 import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.CustomerInfoPageObject;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.RegisterPageObject;
-
-import java.time.Duration;
+import pageObjects.users.UserCustomerInfoPO;
+import pageObjects.users.UserHomePO;
+import pageObjects.users.UserLoginPO;
+import pageObjects.users.UserRegisterPO;
 
 public class Level_04_Multiple_Browser extends BaseTest {
     //Declare variable
     private WebDriver driver;
     
-    private HomePageObject homePage;
-    private RegisterPageObject registerPage;
-    private LoginPageObject loginPage;
-    private CustomerInfoPageObject customerInfo;
+    private UserHomePO homePage;
+    private UserRegisterPO registerPage;
+    private UserLoginPO loginPage;
+    private UserCustomerInfoPO customerInfo;
 
     private String firstName, lastName, day, month, year, emailAddress, companyName, password;
 
@@ -39,7 +33,7 @@ public class Level_04_Multiple_Browser extends BaseTest {
 //       driver.get("");
 //       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        homePage = new HomePageObject(driver);
+        homePage = new UserHomePO(driver);
 
         firstName = "Minh";
         lastName = "Ta";
@@ -56,7 +50,7 @@ public class Level_04_Multiple_Browser extends BaseTest {
     public void User_01_Register() {
         //Action 1
         homePage.clickToRegisterLink();
-        registerPage = new RegisterPageObject(driver);
+        registerPage = new UserRegisterPO(driver);
 
         registerPage.clickToMaleRadio();
         registerPage.enterToFirstNameTextbox(firstName);
@@ -77,15 +71,15 @@ public class Level_04_Multiple_Browser extends BaseTest {
 
     @Test
     public void User_02_Login() {
-        registerPage.clickToLoginButton();
+        registerPage.openLoginPage();
 
-        loginPage = new LoginPageObject(driver);
+        loginPage = new UserLoginPO(driver);
 
         loginPage.enterToEmailTextbox(emailAddress);
         loginPage.enterToPasswordTextbox(password);
         loginPage.clickToLoginButton();
 
-        homePage = new HomePageObject(driver);
+        homePage = new UserHomePO(driver);
 
         Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
     }
@@ -94,7 +88,7 @@ public class Level_04_Multiple_Browser extends BaseTest {
     public void User_03_MyAccount() {
         homePage.clickToMyAccountLink();
 
-        customerInfo = new CustomerInfoPageObject(driver);
+        customerInfo = new UserCustomerInfoPO(driver);
 
         Assert.assertTrue(customerInfo.isGenderMaleSelected());
 

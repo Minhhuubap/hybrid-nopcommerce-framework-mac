@@ -1,8 +1,8 @@
-package pageUIs;
+package pageUIs.users;
 
-public class HomePageUI {
+public class UserHomePageUI {
 
-    public static final String REGISTER_LINK = "//a[@class='ico-register']";
+    public static final String REGISTER_LINK = "Xpath=//a[@class='ico-register']";
     //public: gọi hàm biến ra sdung bthg
         //private/default: khác package không dùng được
         //protected: các class bên PO không kế thừa PUI nên không áp dụng
@@ -14,10 +14,8 @@ public class HomePageUI {
     //REGISTER_LINK: hằng số để lưu dữ liệu không bh thay đổi (const). Để quy ước 1 biến là hằng số không đổi
     //Convention cho hằng số: phải viết hoa - nhiều hơn 1 từ phải dùng _ để tách
 
-    public static final String MY_ACCOUNT_LINK = "//a[@class='ico-account']";
+    public static final String MY_ACCOUNT_LINK = "xpath=//a[@class='ico-account']";
 
 
-
-
-
+    public static final String LOGIN_BUTTON = "xpath=//a[text()='Log in']";
 }

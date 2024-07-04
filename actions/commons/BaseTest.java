@@ -28,7 +28,19 @@ public class BaseTest {
     }
 
     RemoteWebDriver yo = new FirefoxDriver();
-    
+
+//
+    protected WebDriver getBrowserDriver(String browserName, String url) {          //ĐÂY LÀ OVERLOADING METHOD
+        switch (browserName){
+            case "firefox" -> driver = new FirefoxDriver();
+            case "chrome" -> driver = new ChromeDriver();
+            default -> throw new RuntimeException("BrowserName is not valid");
+        }
+
+        driver.get(url);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        return driver;
+    }
 
 
 }

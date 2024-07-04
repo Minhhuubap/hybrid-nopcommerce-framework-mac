@@ -1,12 +1,10 @@
-package pageObjects;
+package pageObjects.users;
 
-import commons.BasePage;
 import org.openqa.selenium.WebDriver;
-import pageUIs.AddressPageUI;
 
-public class AddressPageObject extends SideBarPageObject {
+public class UserAddressPO extends UserSideBarPO {
     private WebDriver driver;
-    public AddressPageObject(WebDriver driver){
+    public UserAddressPO(WebDriver driver){
         super(driver);
         this.driver = driver;
     }
